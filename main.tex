@@ -145,7 +145,7 @@ is equivalent to
 \end{minipage}
 
 \column{0.5\linewidth}
-Gully pixels respond best when the line-in-disk kernel's angle is aligned with the gully trough, and the parallel-versus-perpendicular difference is biggest for the longest lines.
+Gully pixels respond best when the line-in-disk kernel's angle is aligned with the gully trough. Also, the parallel-versus-perpendicular difference is biggest for the longest lines.
 
 \vspace{0.25 cm}
 \includegraphics[width=\linewidth]{img/response-to-line-in-disk-convolution.png}
@@ -251,6 +251,9 @@ Parameter correlations:
 \item Take all pixels with $P > 0.01$ to be nodes of a graph, potentially connected to 8 neighbors (NW, N, NE, W, E, SW, S, SE).
 \item In order of increasing probability $P$, remove a node if removing it does not disconnect its connected component (greedily).
 \end{itemize}
+
+\vspace{0.5 cm}
+By construction, each connected component has no cycles, which also implies that it is a single node wide.
 \end{columns}
 \end{frame}
 
@@ -262,7 +265,7 @@ Parameter correlations:
 \end{columns}
 \end{frame}
 
-\begin{frame}{That I'm putting on a crowded map}
+\begin{frame}{\ldots that I'm putting on a crowded map}
 \vspace{0.15 cm}
 \begin{columns}
 \column{0.88\linewidth}
